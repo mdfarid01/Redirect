@@ -23,6 +23,19 @@ function normalizePhone(rawPhone) {
   return rawPhone.replace(/[^\d+]/g, "");
 }
 
+function normalizeSourceUrl(value) {
+  if (typeof value !== "string" || !value.trim()) {
+    return "";
+  }
+
+  try {
+    const url = new URL(value.trim());
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href.slice(0, 2048) : "";
+  } catch {
+    return "";
+  }
+}
+
 function getSupabaseConfig() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || "";
   const supabaseKey =
@@ -71,12 +84,7 @@ module.exports = async function handler(req, res) {
         name: name.trim(),
         email: email.trim().toLowerCase(),
         phone: normalizePhone(phone.trim()),
-        source_url:
-          typeof source_url === "string"
-            ? source_url.slice(0, 1000)
-            : typeof referrer === "string"
-              ? referrer.slice(0, 1000)
-              : "",
+        source_url: normalizeSourceUrl(source_url || referrer || req.headers.referer),
         created_at: new Date().toISOString()
       }
     ])

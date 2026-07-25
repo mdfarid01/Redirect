@@ -1,7 +1,7 @@
 const form = document.getElementById("stepOneForm");
 const errorText = document.getElementById("errorText");
 
-const landingSourceUrl = document.referrer || "";
+const landingSourceUrl = getLandingSourceUrl();
 
 function validEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -23,10 +23,8 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  const params = new URLSearchParams({
-    name,
-    email,
-    sourceUrl: landingSourceUrl
-  });
-  window.location.href = `/phone.html?${params.toString()}`;
+  // Keep submitted details out of the address bar, browser history, and referrer.
+  sessionStorage.setItem("feedback-name", name);
+  sessionStorage.setItem("feedback-email", email);
+  window.location.href = "/phone.html";
 });

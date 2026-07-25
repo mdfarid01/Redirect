@@ -1,10 +1,9 @@
 const form = document.getElementById("stepTwoForm");
 const errorText = document.getElementById("errorText");
 
-const params = new URLSearchParams(window.location.search);
-const name = params.get("name") || "";
-const email = params.get("email") || "";
-const sourceUrl = params.get("sourceUrl") || "";
+const name = sessionStorage.getItem("feedback-name") || "";
+const email = sessionStorage.getItem("feedback-email") || "";
+const sourceUrl = getStoredSourceUrl();
 
 form.name.value = name;
 form.email.value = email;
@@ -38,7 +37,7 @@ form.addEventListener("submit", async (event) => {
         name: form.name.value,
         email: form.email.value,
         phone,
-        source_url: sourceUrl || document.referrer || ""
+        source_url: sourceUrl
       })
     });
 
@@ -47,6 +46,9 @@ form.addEventListener("submit", async (event) => {
       throw new Error(data.error || "Failed to submit demo details.");
     }
 
+    sessionStorage.removeItem("feedback-name");
+    sessionStorage.removeItem("feedback-email");
+    sessionStorage.removeItem("feedback-source-url");
     window.location.href = "/thank-you.html";
   } catch (error) {
     errorText.textContent = error.message;

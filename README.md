@@ -52,6 +52,24 @@ Open:
 
 The admin table automatically shows the source URL, so you can see the page the user arrived from before completing the flow.
 
+## Source tracking with a Chrome extension
+
+Browser referrer data is often removed during extension-driven redirects, so pass the original tab URL explicitly. Configure the extension to open the feedback site in this format:
+
+```text
+https://your-feedback-domain.example/?source_url=<URL-encoded original tab URL>
+```
+
+For example, an extension redirecting from `https://site.example/campaign` should open:
+
+```text
+https://your-feedback-domain.example/?source_url=https%3A%2F%2Fsite.example%2Fcampaign
+```
+
+The app stores this value temporarily in the browser only until the form is submitted, then sends it as `source_url` to Supabase. It also accepts `sourceUrl` and `source` while you update existing extension links. A normal link still uses the browser referrer as a fallback.
+
+`source_url` identifies the originating website/page; it does not reliably identify a visitor's country. If you need country reporting, collect it separately with clear user notice and an appropriate consent/privacy policy.
+
 ## Deploying to Vercel
 
 This app is designed to deploy with the static front end plus Vercel API routes.
