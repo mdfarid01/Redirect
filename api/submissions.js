@@ -84,7 +84,9 @@ module.exports = async function handler(req, res) {
         name: name.trim(),
         email: email.trim().toLowerCase(),
         phone: normalizePhone(phone.trim()),
-        source_url: normalizeSourceUrl(source_url || referrer || req.headers.referer),
+        // Do not use req.headers.referer here: on this request it is normally
+        // this app's /phone.html page, not the site that began the redirect.
+        source_url: normalizeSourceUrl(source_url || referrer),
         created_at: new Date().toISOString()
       }
     ])
