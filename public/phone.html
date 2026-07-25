@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Your Access (Demo) - Phone</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h2>Verification Step (Demo)</h2>
+        <p class="notice">
+          Enter an international phone number format (example: +14155552671).
+        </p>
+        <form id="stepTwoForm" novalidate>
+          <input id="name" name="name" type="hidden" />
+          <input id="email" name="email" type="hidden" />
+
+          <label for="phone">Phone Number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            autocomplete="tel"
+            placeholder="+14155552671"
+            required
+          />
+
+          <p class="error" id="errorText"></p>
+          <button type="submit">Complete Demo</button>
+        </form>
+      </section>
+    </main>
+    <script src="/phone.js" defer></script>
+  </body>
+</html>

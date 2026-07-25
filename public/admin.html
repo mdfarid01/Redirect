@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Your Access (Demo) - Admin</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card" style="max-width: 1000px">
+        <h2>Demo Submissions (Admin)</h2>
+        <p class="notice">Authorized administrators only.</p>
+        <form id="adminLoginForm" class="admin-login" novalidate>
+          <label for="adminPassword">Admin Password</label>
+          <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required />
+          <button type="submit">Unlock Admin</button>
+        </form>
+        <p class="error" id="loginError"></p>
+        <div id="adminContent" hidden>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Source URL</th>
+                <th>Date &amp; Time</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        </div>
+      </section>
+    </main>
+    <script src="/admin.js" defer></script>
+  </body>
+</html>

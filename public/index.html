@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Your Access (Demo)</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Secure Your Access (Demo)</h1>
+        <p class="notice">
+          Educational cybersecurity awareness demonstration. Do not enter sensitive or real credentials.
+        </p>
+        <form id="stepOneForm" novalidate>
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+
+          <p class="error" id="errorText"></p>
+          <button type="submit">Continue</button>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
