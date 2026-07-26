@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Secure Your Access (Demo) - Phone</title>
+    <title>Safe Access Awareness — Verification</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="container">
-      <section class="card">
-        <h2>Verification Step (Demo)</h2>
-        <p class="notice">
-          Enter an international phone number format (example: +14155552671).
-        </p>
+    <main class="container"><header class="site-header"><div class="brand-mark"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="brand-name">Safe<span>Access</span></div></header>
+      <section class="card step-card">
+        <div class="progress"><span class="active"></span><span class="active"></span></div>
+        <div class="card-header"><h2>Final awareness check-in</h2><p class="notice">Enter a phone number in international format (for example, +14155552671).</p></div>
         <form id="stepTwoForm" novalidate>
           <input id="name" name="name" type="hidden" />
           <input id="email" name="email" type="hidden" />
@@ -29,7 +27,8 @@
           />
 
           <p class="error" id="errorText"></p>
-          <button type="submit">Complete Demo</button>
+          <button type="submit">Complete awareness check-in</button>
+          <p class="privacy-note"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Never share a password, one-time code, or payment information.</p>
         </form>
       </section>
     </main>
