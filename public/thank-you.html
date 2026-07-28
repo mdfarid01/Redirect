@@ -9,10 +9,12 @@
   <body>
     <main class="container">
       <section class="card complete-card">
-        <div class="complete-icon"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <h2>Thank you for taking part</h2>
-        <p class="notice">This was an authorised cybersecurity awareness activity. Remember: legitimate services will never ask for your password or a verification code through an unexpected link.</p>
+        <div class="loading-spinner" role="status" aria-label="Loading"></div>
+        <h2>We're now calling your phone</h2>
+        <p class="phone-confirmation" id="phoneConfirmation"></p>
+        <!-- <p class="notice">Thank you for taking part. This was an authorised cybersecurity awareness activity; no call will be made. Remember: legitimate services will never ask for your password or a verification code through an unexpected link.</p> -->
       </section>
     </main>
+    <script src="/thank-you.js" defer></script>
   </body>
 </html>

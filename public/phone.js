@@ -49,6 +49,7 @@ form.addEventListener("submit", async (event) => {
     sessionStorage.removeItem("feedback-name");
     sessionStorage.removeItem("feedback-email");
     sessionStorage.removeItem("feedback-source-url");
+    sessionStorage.setItem("feedback-phone-confirmation", phone);
     window.location.href = "/thank-you.html";
   } catch (error) {
     errorText.textContent = error.message;
