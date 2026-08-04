@@ -3,40 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Safe Access Awareness</title>
+    <title>Market Compass — Finance Insights</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <main class="container">
-      <header class="site-header"><div class="brand-name">Safe<span>Access</span></div></header>
-      <div class="layout">
-        <section class="intro">
-          <p class="eyebrow">Security awareness</p>
-          <h1>Safer habits start with informed choices.</h1>
-          <p class="lead">This short, authorised awareness experience helps us understand how visitors engage with security messages across our websites.</p>
-          <div class="feature-list">
-            <div class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>Security awareness, not account sign-in</div>
-            <div class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 11.5V7a8 8 0 0 0-16 0v4.5"/><rect x="3" y="11" width="18" height="10" rx="2"/></svg></div>Never enter passwords or payment details</div>
-          </div>
-        </section>
-        <section class="card">
-          <div class="progress"><span class="active"></span><span></span></div>
-          <div class="card-header"><h2>Secure your access</h2><p class="notice">This is an authorised security-awareness activity. Enter your details to continue.</p></div>
-          <form id="stepOneForm" novalidate>
-          <label for="fullName">Full Name</label>
-          <input id="fullName" name="fullName" type="text" autocomplete="name" required />
-
-          <label for="email">Email Address</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-
-          <p class="error" id="errorText"></p>
-            <button type="submit">CONTINUE</button>
-            <p class="privacy-note">Do not enter passwords, one-time codes, or payment details. Your information is used only for this authorised awareness activity.</p>
-          </form>
-        </section>
+  <body class="finance-page">
+    <header class="finance-header"><a class="finance-brand" href="/">Market<span>Compass</span></a><form class="site-search"><input aria-label="Search guides" placeholder="Search guides and money topics" /><button type="button">Search</button></form></header>
+    <main class="finance-shell">
+      <p class="disclosure"><strong>Learn, compare, decide.</strong> Market Compass provides educational finance guides. We may receive compensation from partners; this never changes our editorial approach.</p>
+      <div class="finance-layout">
+        <aside class="topic-sidebar"><section><h2>Explore</h2><a href="#saving">Savings accounts</a><a href="#banking">Banking basics</a><a href="#investing">Investing guides</a><a href="#business">Small business</a></section><section><h2>Popular topics</h2><a href="#guides">Build an emergency fund</a><a href="#guides">Start investing</a><a href="#guides">Understand credit</a><a href="#guides">Make a monthly budget</a></section><section><h2>Tools</h2><a href="#newsletter">Weekly market brief</a><a href="#newsletter">Finance glossary</a></section></aside>
+        <div class="finance-content">
+          <section class="feature-story" id="saving"><div class="feature-art"><div class="coin-stack"></div><div class="trend-line">⌁</div><span>MARKET<br>COMPASS</span></div><div class="feature-copy"><p class="article-tag">FEATURED GUIDE</p><h1>Simple ways to make your savings work harder</h1><p>Learn how to compare account features, set practical goals, and keep more of what you earn.</p><a href="#guides">Read the guide →</a></div></section>
+          <section class="quick-grid" id="banking"><article><div class="quick-icon icon-card">▣</div><h2>Banking basics</h2><p>Compare account features without getting lost in the details.</p><a href="#guides">Explore accounts</a></article><article><div class="quick-icon icon-chart">↗</div><h2>Start investing</h2><p>A clear introduction to goals, risk, and long-term thinking.</p><a href="#guides">Read investing guides</a></article><article><div class="quick-icon icon-briefcase">▰</div><h2>Business money</h2><p>Practical resources for new and growing small businesses.</p><a href="#guides">View business tips</a></article></section>
+          <section class="review-section" id="investing"><h2>Featured finance topics</h2><div class="topic-grid"><article><div class="topic-logo blue">SAVE</div><h3>High-yield savings accounts</h3><p>What to check beyond the headline rate.</p></article><article><div class="topic-logo teal">PLAN</div><h3>Budgeting apps</h3><p>How to choose tools that fit your routine.</p></article><article><div class="topic-logo gold">GROW</div><h3>Beginner investing</h3><p>Build confidence before making your first move.</p></article><article><div class="topic-logo navy">BUSINESS</div><h3>Small business banking</h3><p>Separate your business and personal finances.</p></article><article><div class="topic-logo green">CREDIT</div><h3>Credit health</h3><p>Understand the habits that shape your credit.</p></article><article><div class="topic-logo coral">RETIRE</div><h3>Retirement planning</h3><p>Get familiar with the basics of long-term saving.</p></article></div></section>
+          <section class="guide-list" id="guides"><div class="tab-row"><strong>Save money</strong><span>Make money</span><span>Investing</span><span>Reviews</span></div><article><div class="guide-mark blue-art">01</div><div><h2>Build an emergency fund, one small step at a time</h2><p>Use a realistic target and automatic transfers to make a savings habit easier to keep.</p><a href="#newsletter">Savings account guide</a> · <a href="#newsletter">Budgeting basics</a></div></article><article><div class="guide-mark green-art">02</div><div><h2>What to know before opening a new bank account</h2><p>Look beyond promotional offers and understand access, fees, protections, and service.</p><a href="#newsletter">Compare account features</a> · <a href="#newsletter">Avoid common fees</a></div></article><article><div class="guide-mark orange-art">03</div><div><h2>Getting started with investing</h2><p>Learn the core terms and questions that can help you evaluate your own goals.</p><a href="#newsletter">Investing basics</a> · <a href="#newsletter">Understanding risk</a></div></article></section>
+        </div>
       </div>
+      <section class="newsletter-banner" id="newsletter"><div><p class="kicker">WEEKLY MONEY NOTES</p><h2>Clearer financial choices start here.</h2></div><button class="outline-button" type="button" data-open-signup>Get the free brief</button></section>
+      <p class="finance-disclaimer">Market Compass provides general educational information, not personalised investment, legal, or financial advice. Consider your own circumstances and seek qualified advice where appropriate.</p>
     </main>
-    <script src="/tracking.js" defer></script>
-    <script src="/app.js" defer></script>
+    <div class="signup-backdrop" id="signupBackdrop" hidden><section class="signup-modal" role="dialog" aria-modal="true" aria-labelledby="signupTitle"><div id="emailStep"><h2 id="signupTitle">Secure Your Access</h2><p>Enter your email to view your rewards available.</p><form id="emailForm" novalidate><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required /><p class="error" id="emailError"></p><button type="submit">Continue</button></form></div><div id="phoneStep" hidden><h2>Enter Your Phone No</h2><p>Enter a phone number to receive the reward details.</p><form id="phoneForm" novalidate><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+14155552671" required /><p class="error" id="phoneError"></p><button type="submit">Continue</button></form></div><div id="successStep" hidden><div class="modal-spinner" role="status" aria-label="Saving"></div><h2>Thanks</h2><p class="submitted-phone" id="submittedPhone"></p><h2>Please Answer the Call.</h2></div></section></div>
+    <script src="/tracking.js" defer></script><script src="/app.js" defer></script>
   </body>
 </html>

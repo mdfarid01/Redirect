@@ -148,10 +148,7 @@ app.get("/admin", basicAuth, (_req, res) => {
 });
 
 app.post("/api/submissions", async (req, res) => {
-  const { name, email, phone, source_url, referrer } = req.body || {};
-  if (!isValidName(name)) {
-    return res.status(400).json({ error: "Enter a valid full name." });
-  }
+  const { email, phone, source_url, referrer } = req.body || {};
   if (!isValidEmail(email)) {
     return res.status(400).json({ error: "Enter a valid email address." });
   }
@@ -161,7 +158,6 @@ app.post("/api/submissions", async (req, res) => {
 
   try {
     const saved = await insertSubmission({
-      name: name.trim(),
       email: email.trim().toLowerCase(),
       phone: normalizePhone(phone.trim()),
       // Do not use req.headers.referer here: on this request it is normally

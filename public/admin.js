@@ -21,7 +21,6 @@ function renderTable(data) {
     .map(
       (entry) => `
       <tr>
-        <td>${safe(entry.name)}</td>
         <td>${safe(entry.email)}</td>
         <td>${safe(entry.phone)}</td>
         <td>${safe(entry.source_url || entry.referrer)}</td>
